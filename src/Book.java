@@ -1,35 +1,38 @@
-public class Book {
+public class Book { //Detta är ett publikt object, du kan få denna info men inte ändra värdena då dessa är privata
 
-    private String title;
+    public String title;
 
-    private String author;
+    public String author;
 
-    private int year;
+    public int year;
 
-    private String edition;
+    public String edition;
 
-    private Boolean available;
+    public boolean available;
 
-    public Book(String title, String author, int year, String edition) {
+    public Book(String title, String author, int year, String edition) { //konstruktör
         this.title = title;
         this.author = author;
         this.year = year;
         this.edition = edition;
         this.available = true;
     }
-    public String getTitle(){
+
+    public String getTitle() { //Detta är en getter
         return title;
     }
 
-    public void returnBook() {
-
+    public boolean isAvailable() {
+        return this.available;
     }
-    public void loan() {
 
+    public void setAvailable(boolean available) {
+        this.available = available;
     }
+
+
     public String toString() {
-        return "Name: " + this.title + "Writer: " + this.author + "Year: " + this.year +
-                "Edition: " + this.edition;
+        return "Name: " + this.title + "Writer: " + this.author + "Year: " + this.year + "Edition: " + this.edition + "Available: " + this.available;
 
     }
 
